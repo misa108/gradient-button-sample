@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  background-color: #fdf8f8;
+  color: #333;
+  font-family: 'YuGothic', 'Yu Gothic', sans-serif;
+  padding: 40px;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+.c-button {
+  display: block;
+  max-width: 300px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 32px;
+  padding: 18px 0;
+  text-align: center;
+}
+.c-button::before,
+.c-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.3s ease;
+}
+.c-button::before {
+  z-index: -1;
+}
+.c-button::after {
+  z-index: -2;
+}
+.c-button.c-button--lightblue::before {
+  background: linear-gradient(138.65deg, #E4EFF9 -5.21%, #E3F3F3 51.06%, #C2E2F1 119.84%);
+}
+.c-button.c-button--lightblue::after {
+  background: linear-gradient(-138.65deg, #E4EFF9 -5.21%, #E3F3F3 51.06%, #C2E2F1 119.84%);
+}
+.c-button:hover::before {
+  opacity: 0;
+}
+
